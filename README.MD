@@ -3,6 +3,7 @@
 ###项目使用typescript & babel & webpack & gulp
 
 ###源码在src文件夹下
+src/index.ts为入口文件
 
 ###运行此项目需要按如下步骤操作
 
