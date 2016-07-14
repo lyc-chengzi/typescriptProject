@@ -1,0 +1,14 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "commonjs",
+        "listFiles": true,
+        "outDir": "build_ts"
+    },
+    "exclude": [
+        "node_modules",
+        ".vscode",
+        "build_ts"
+    ]
+}
