@@ -13,6 +13,7 @@
     "del": "^2.2.1",
     "gulp": "^3.9.1",
     "gulp-typescript": "^2.13.6",
+    "html-webpack-plugin": "^2.22.0",
     "webpack": "^1.13.1"
   },
   "scripts": {

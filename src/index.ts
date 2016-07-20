@@ -5,7 +5,11 @@ class Animal extends Student {
         super(firstName, middleName, lastName, age);
     }
     log() {
-        let cup = new Tools.Cup(this);
+        var cup = new Tools.Cup(this);
+        cup.log();
         console.log('cup s owner is '+ this.fullName);
     }
 }
+
+var animal = new Animal("f", 'm', 'liu', 26);
+animal.showSelf();

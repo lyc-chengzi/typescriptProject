@@ -22,4 +22,4 @@ npm run build
 * webpack将文件打包并输出
 
 
-最后编译后的js代码将生成在dist文件夹下
+最后编译后的js代码将生成在dist文件夹下,入口为index.html

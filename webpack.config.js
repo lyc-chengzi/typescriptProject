@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 
 const app_dir = path.join(__dirname, './src') ;
@@ -50,10 +51,31 @@ module.exports = {
         ]
     },
     plugins: [
-	              
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            inject: 'body',
+            hash: false,
+            inject: true,
+            compile: true,
+            favicon: false,
+            minify: false,
+            cache: true,
+            showErrors: true
+        }),
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.UglifyJsPlugin()
     ],
     resolve: {
-        
+        //查找module的话从这里开始查找
+        root: 'D:/project/my/typescriptProject/src', //绝对路径
+        //自动扩展文件后缀名，意味着我们require模块可以省略不写后缀名
+        extensions: ['', '.js', '.json', '.scss'],
+        //模块别名定义，方便后续直接引用别名，无须多写长长的地址
+        alias: {
+            AppStore : 'js/stores/AppStores.js',//后续直接 require('AppStore') 即可
+            ActionType : 'js/actions/ActionType.js',
+            AppAction : 'js/actions/AppAction.js'
+        }
     },
     devtool: 'source-map'
 };
